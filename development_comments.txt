@@ -1,0 +1,66 @@
+#1 Creating Django Project
+A new Django web app project is created by running:
+
+django-admin startproject <web_app_name>
+
+This creates a folder with a manage.py file. Manage.py is used to run the server or create migrations
+
+
+#2: Building Apps
+Django web applications are made up of apps. Each app represents a service.
+To create new django apps run:
+
+python manage.py <app name>
+
+This command will generate all the files needed to create a functioning app
+
+
+#3 Models & Database Configuration
+
+A model is a framework that encapsulate the information of users (email, name and etc)
+which will be used to process services in our web application. Models written in Python
+must be transformed to be compatible with Databases.
+
+python manage.py makemigrations <app_name>  accomplishes this. This generates a new file related to the model
+
+Running python manage.py migrate sends and configures the database based on the file generated from python manage.py makemigration
+
+
+# Running application
+
+python manage.py runserver
+
+# PRO TIPS
+
+Use Postman to test POST and GET queries to web app
+
+# SUPER IMPORTANT
+
+Model Modifications means you have to run makemigration again and then migrate.
+If migrate pushes "no migrations to apply", then follow this guide to troubleshoot:
+
+https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html
+
+
+# Front End folder
+
+# Template (Handles HTML File)
+# Static ()
+
+# Node.js dependencies
+
+# npm init -y creates Javascript package with dependency list (generates package.json & package-lock.json)
+# npm i -D webpack webpack-cli. Install we
+# npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-plugin-transform-class-properties
+
+# Installing React
+
+#  npm i react react-dom prop-types
+
+# Build .babelrc file in root directory of project
+
+# create webpack.config.js file. Build module.exports
+
+# Modify package.json file. Change values in script key. We'll create a "dev" and
+"build" script. "dev" script build a development executable of web app whereas "build"
+will build a production ready version of the web application.
