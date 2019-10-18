@@ -6,12 +6,16 @@ from django.db import models
 class Lead(models.Model):
     # Patient Name
     name = models.CharField(max_length = 100)
+    # Patient Age
+    #age = models.IntegerField(max_length= 12)
     # Patient Email, Unique = T makes sure emails are unique
     email = models.EmailField(max_length = 100, unique = True)
     # Optional Patient Messages to Physician, blank = T sets messages as optional
     messages = models.CharField(max_length = 500, blank = True)
     # Patient Appointment Time. Auto_now_add adds Appointment Data Automatically
     appointment = models.DateTimeField(auto_now_add = True )
+
+
 
 
 # class Doctor(model.Model):
