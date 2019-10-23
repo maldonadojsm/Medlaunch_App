@@ -22,6 +22,11 @@ export class Form extends Component {
     const { name, email, messages } = this.state;
     const lead = { name, email, messages };
     this.props.addLead(lead);
+    this.setState({
+      name: "",
+      email: "",
+      messages: ""
+    });
   };
 
   render() {
